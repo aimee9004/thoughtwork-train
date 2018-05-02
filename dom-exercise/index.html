@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .login {
+            width: 400px;
+            padding: 30px;
+            margin: 150px auto;
+            border: 1px solid #ddd;
+        }
+        .login > input {
+            display: block;
+            width: 300px;
+            height: 35px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <input id="name" type="text" placeholder="请输入用户名">
+        <input id="password" type="password" placeholder="请输入密码">
+        <button onclick="login()">登录</button>
+    </div>
+    <script type="text/javascript">
+        function login() {
+            if(document.getElementById('name').value === '123' && document.getElementById('password').value === '123') {
+                alert('登录成功')
+                return
+            }
+            if(document.getElementById('name').value === '') {
+                alert('用户名不能为空')  
+                return 
+            }else if(document.getElementById('name').value !== '123') {
+                document.getElementById('name').value = ''
+                alert('请输入正确的用户名')   
+                return
+            }
+            if(document.getElementById('password').value === '') {
+                alert('密码不能为空')   
+                return
+            }else if(document.getElementById('password').value !== '123') {
+                document.getElementById('password').value = ''
+                alert('请输入正确的密码')   
+            }
+        }
+    </script>
+</body>
+</html>
